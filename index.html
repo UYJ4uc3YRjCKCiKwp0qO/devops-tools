@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA | Future of Shopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">NEXORA<span>.</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">✦ THE NEXT GENERATION OF SHOPPING</span>
+        <h1>Upgrade Your<br>Everyday <span>Style.</span></h1>
+        <p>
+          Discover products that blend incredible design,
+          cutting-edge technology, and everyday comfort.
+        </p>
+        <a href="#products" class="primary-button">Explore Collection ↗</a>
+
+        <div class="hero-stats">
+          <div><strong>500+</strong><small>Products</small></div>
+          <div><strong>10k+</strong><small>Happy customers</small></div>
+          <div><strong>4.9/5</strong><small>Customer rating</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+          alt="Premium wireless headphones"
+          class="hero-image"
+        >
+        <div class="floating-card">
+          <span>🔥 Trending now</span>
+          <strong>Sound Pro X</strong>
+          <small>Premium audio experience</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR COLLECTION</span>
+          <h2>Find Your <span>Favorites.</span></h2>
+        </div>
+        <div class="search-box">
+          <span>⌕</span>
+          <input type="search" id="searchInput"
+                 placeholder="Search products...">
+        </div>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="All">All Products</button>
+        <button class="filter" data-category="Audio">Audio</button>
+        <button class="filter" data-category="Wearables">Wearables</button>
+        <button class="filter" data-category="Accessories">Accessories</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>
+        No products found. Try another search.
+      </p>
+    </section>
+
+    <section class="promo" id="about">
+      <div>
+        <span class="eyebrow">A LITTLE SOMETHING EXTRA</span>
+        <h2>Good taste.<br><span>Better prices.</span></h2>
+        <p>Find your next favorite thing without breaking the bank.</p>
+        <a href="#products" class="primary-button">Shop Now ↗</a>
+      </div>
+      <div class="promo-symbol">N<span>.</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">NEXORA<span>.</span></a>
+    <p>Designed for the way you live. © <span id="year"></span> NEXORA.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
