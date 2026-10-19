@@ -4,102 +4,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXORA | Future of Shopping</title>
+  <title>NEXORA — Shop the Extraordinary</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <div class="announcement">
+    ✨ SPECIAL OFFER — UP TO 40% OFF SELECTED PRODUCTS ✨
+  </div>
+
   <header class="navbar">
-    <a href="#" class="logo">NEXORA<span>.</span></a>
+    <a href="#home" class="logo">NEXORA<span>✦</span></a>
 
     <nav>
       <a href="#home">Home</a>
-      <a href="#products">Products</a>
+      <a href="#products">Shop</a>
       <a href="#about">About</a>
     </nav>
 
     <button class="cart-button" id="cartButton">
-      🛒 Cart <span id="cartCount">0</span>
+      🛍️ <span>Cart</span>
+      <b id="cartCount">0</b>
     </button>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-content">
-        <span class="eyebrow">✦ THE NEXT GENERATION OF SHOPPING</span>
-        <h1>Upgrade Your<br>Everyday <span>Style.</span></h1>
-        <p>
-          Discover products that blend incredible design,
-          cutting-edge technology, and everyday comfort.
-        </p>
-        <a href="#products" class="primary-button">Explore Collection ↗</a>
+      <div class="hero-copy">
+        <span class="pill">🌈 YOUR WORLD, YOUR STYLE</span>
+        <h1>Make Every<br>Day <span>Extraordinary.</span></h1>
+        <p>Discover bold designs, amazing gadgets, and everyday essentials that make you smile.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Products ↗</a>
+          <a href="#about" class="btn btn-secondary">Discover More</a>
+        </div>
 
-        <div class="hero-stats">
-          <div><strong>500+</strong><small>Products</small></div>
-          <div><strong>10k+</strong><small>Happy customers</small></div>
-          <div><strong>4.9/5</strong><small>Customer rating</small></div>
+        <div class="trust-row">
+          <div class="avatars"><span>😊</span><span>😎</span><span>🤩</span></div>
+          <div><strong>10,000+</strong><small>Happy shoppers</small></div>
+          <div class="rating">⭐ 4.9/5</div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <img
-          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
-          alt="Premium wireless headphones"
-          class="hero-image"
-        >
-        <div class="floating-card">
-          <span>🔥 Trending now</span>
-          <strong>Sound Pro X</strong>
-          <small>Premium audio experience</small>
+      <div class="hero-art">
+        <div class="blob blob-one"></div>
+        <div class="blob blob-two"></div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85" alt="Stylish premium headphones">
         </div>
+        <div class="sticker sticker-top">🔥 HOT<br>DEALS</div>
+        <div class="sticker sticker-bottom">YOUR<br>NEW FAVE 💜</div>
+        <span class="spark spark-one">✦</span>
+        <span class="spark spark-two">✧</span>
       </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>🚚</span><p><strong>Fast Delivery</strong><small>Shipping made easy</small></p></div>
+      <div><span>💎</span><p><strong>Premium Quality</strong><small>Products you'll love</small></p></div>
+      <div><span>💖</span><p><strong>Customer First</strong><small>Here to help you</small></p></div>
+      <div><span>🔒</span><p><strong>Secure Shopping</strong><small>Shop with confidence</small></p></div>
     </section>
 
     <section class="products-section" id="products">
       <div class="section-heading">
         <div>
-          <span class="eyebrow">OUR COLLECTION</span>
-          <h2>Find Your <span>Favorites.</span></h2>
+          <span class="eyebrow">CURATED JUST FOR YOU ✨</span>
+          <h2>Find Your <span>Happy Place.</span></h2>
+          <p>Good vibes. Great products. Even better prices.</p>
         </div>
         <div class="search-box">
-          <span>⌕</span>
-          <input type="search" id="searchInput"
-                 placeholder="Search products...">
+          <span>🔍</span>
+          <input id="searchInput" type="search" placeholder="Find your favorite...">
         </div>
       </div>
 
       <div class="filters" id="filters">
-        <button class="filter active" data-category="All">All Products</button>
-        <button class="filter" data-category="Audio">Audio</button>
-        <button class="filter" data-category="Wearables">Wearables</button>
-        <button class="filter" data-category="Accessories">Accessories</button>
+        <button class="filter active" data-category="All">🌈 Everything</button>
+        <button class="filter" data-category="Audio">🎧 Audio</button>
+        <button class="filter" data-category="Wearables">⌚ Wearables</button>
+        <button class="filter" data-category="Accessories">👟 Accessories</button>
       </div>
 
       <div class="product-grid" id="productGrid"></div>
-      <p id="emptyMessage" class="empty-message" hidden>
-        No products found. Try another search.
-      </p>
+      <p class="empty-message" id="emptyMessage" hidden>No matches found 💜 Try another search!</p>
     </section>
 
     <section class="promo" id="about">
-      <div>
-        <span class="eyebrow">A LITTLE SOMETHING EXTRA</span>
-        <h2>Good taste.<br><span>Better prices.</span></h2>
-        <p>Find your next favorite thing without breaking the bank.</p>
-        <a href="#products" class="primary-button">Shop Now ↗</a>
+      <div class="promo-copy">
+        <span class="pill">💝 A LITTLE TREAT FOR YOU</span>
+        <h2>Life's too short<br>for <span>boring stuff.</span></h2>
+        <p>Bring home something wonderful. Your next favorite find is just a click away.</p>
+        <a href="#products" class="btn btn-dark">Find Your Favorite ✨</a>
       </div>
-      <div class="promo-symbol">N<span>.</span></div>
+      <div class="promo-art">
+        <div class="promo-circle">N<span>✦</span></div>
+        <span class="promo-emoji">🎁</span>
+        <span class="promo-emoji emoji-two">💜</span>
+        <span class="promo-emoji emoji-three">⭐</span>
+      </div>
     </section>
   </main>
 
   <footer>
-    <a href="#home" class="logo">NEXORA<span>.</span></a>
-    <p>Designed for the way you live. © <span id="year"></span> NEXORA.</p>
+    <a href="#home" class="logo">NEXORA<span>✦</span></a>
+    <p>Made with 💜 for people who love the extraordinary.</p>
+    <p>© <span id="year"></span> NEXORA</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -107,3 +118,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
