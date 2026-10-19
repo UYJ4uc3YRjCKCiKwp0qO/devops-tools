@@ -115,6 +115,67 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+
+<!-- Floating chatbot button -->
+<button id="chatToggle" class="chat-toggle"
+        aria-label="Open shopping assistant"
+        aria-expanded="false">
+  <span class="chat-icon">💬</span>
+  <span class="chat-toggle-label">Ask NEXI</span>
+  <span class="chat-online"></span>
+</button>
+
+<!-- Chat window -->
+<section class="chat-widget" id="chatWidget"
+         aria-label="NEXORA shopping assistant"
+         aria-hidden="true">
+
+  <div class="chat-header">
+    <div class="bot-avatar">🤖</div>
+
+    <div class="chat-heading">
+      <h3>NEXI <span>✦</span></h3>
+      <p><i></i> Your shopping buddy</p>
+    </div>
+
+    <button id="chatClose" class="chat-close"
+            aria-label="Close chat">×</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages"
+       aria-live="polite">
+    <div class="chat-date">YOUR NEXORA ASSISTANT ✨</div>
+
+    <div class="chat-message bot-message">
+      <span class="message-avatar">🤖</span>
+      <div class="message-bubble">
+        Hey there! 💜 I'm NEXI, your shopping buddy!
+        <br><br>
+        Looking for something cool? I can help you discover
+        products, check prices, and explore your cart. 🛍️
+      </div>
+    </div>
+
+    <div class="quick-replies">
+      <button data-chat="Show me popular products">🔥 Popular products</button>
+      <button data-chat="Show me audio products">🎧 Audio</button>
+      <button data-chat="What is in my cart?">🛒 My cart</button>
+      <button data-chat="Tell me about shipping">🚚 Shipping</button>
+    </div>
+  </div>
+
+  <form class="chat-input-area" id="chatForm">
+    <input id="chatInput" type="text"
+           placeholder="Ask me anything..."
+           autocomplete="off"
+           aria-label="Type a message"
+           maxlength="300"
+           required>
+    <button type="submit" aria-label="Send message">➤</button>
+  </form>
+
+  <div class="chat-footer">Made with 💜 by NEXORA</div>
+</section>
   <script src="script.js"></script>
 </body>
 </html>
